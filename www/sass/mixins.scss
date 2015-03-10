@@ -1,0 +1,12 @@
+
+@mixin buttonShadowAndColor($shadow) {
+    box-shadow: inset 3px -5px darken($shadow, 7%);
+    background-color: $shadow;
+}
+
+@mixin active($back-color) {
+    box-shadow: none;
+    opacity: 1;
+    background-color: $back-color;
+    transform: scale(0.999);
+}

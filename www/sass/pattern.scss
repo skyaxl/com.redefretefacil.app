@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+.navigation-bar {
+    background-color: $header-backcolor;
+    width: $full-width;
+    color: $header-forecolor;
+    .toolbar-button {
+        color: $header-forecolor;
+    }
+}
+
+.tab-bar {
+    .button {
+        @include reset-border-radius();
+        color: $tab-bar-button-fore-color;
+    }
+}
+
+.primary-button {
+    @include buttonShadowAndColor($primary-button-color);
+    &:active {
+        @include active($primary-button-color);
+    }
+}
+
+.secondary-button {
+    @include buttonShadowAndColor($secondary-button-color);
+    &:active {
+        @include active($secondary-button-color);
+    }
+}

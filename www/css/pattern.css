@@ -1,0 +1,30 @@
+.navigation-bar {
+  background-color: #1fbdbe;
+  width: 100%;
+  color: white !important; }
+  .navigation-bar .toolbar-button {
+    color: white !important; }
+
+.tab-bar .button {
+  border-radius: 0;
+  color: white; }
+
+.primary-button {
+  box-shadow: inset 3px -5px #db7700;
+  background-color: #ff8a00; }
+  .primary-button:active {
+    box-shadow: none;
+    opacity: 1;
+    background-color: #ff8a00;
+    -webkit-transform: scale(0.999);
+    transform: scale(0.999); }
+
+.secondary-button {
+  box-shadow: inset 3px -5px #c5c5c5;
+  background-color: #d7d7d7; }
+  .secondary-button:active {
+    box-shadow: none;
+    opacity: 1;
+    background-color: #d7d7d7;
+    -webkit-transform: scale(0.999);
+    transform: scale(0.999); }
