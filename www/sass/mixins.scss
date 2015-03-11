@@ -1,6 +1,5 @@
-
 @mixin buttonShadowAndColor($shadow) {
-    box-shadow: inset 3px -5px darken($shadow, 7%);
+    box-shadow:  inset 3px -3px darken($shadow, 7%);
     background-color: $shadow;
 }
 
@@ -9,4 +8,14 @@
     opacity: 1;
     background-color: $back-color;
     transform: scale(0.999);
+}
+
+@mixin vertical-align() {
+    position: absolute;
+    top: 25%;
+}
+
+@mixin horizontal-center-align() {
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -4,16 +4,24 @@
 .navigation-bar {
     background-color: $header-backcolor;
     width: $full-width;
-    color: $header-forecolor;
-    .toolbar-button {
-        color: $header-forecolor;
-    }
+    color: $header-forecolor !important;
+}
+
+.navigation-bar * {
+    color: $header-forecolor !important;
 }
 
 .tab-bar {
+    height: 9%;
+    .tab-bar__item {
+        height: 100%;
+        padding: 0;
+    }
     .button {
         @include reset-border-radius();
         color: $tab-bar-button-fore-color;
+        height: 100%;
+        margin:0;
     }
 }
 
@@ -29,4 +37,9 @@
     &:active {
         @include active($secondary-button-color);
     }
+}
+
+.page--full_bg__content {
+    background-image: url(../img/home_compressed.jpg) !important;
+    background-size: 150% 220% !important;
 }

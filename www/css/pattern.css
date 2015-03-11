@@ -2,29 +2,39 @@
   background-color: #1fbdbe;
   width: 100%;
   color: white !important; }
-  .navigation-bar .toolbar-button {
-    color: white !important; }
 
-.tab-bar .button {
-  border-radius: 0;
-  color: white; }
+.navigation-bar * {
+  color: white !important; }
+
+.tab-bar {
+  height: 9%; }
+  .tab-bar .tab-bar__item {
+    height: 100%;
+    padding: 0; }
+  .tab-bar .button {
+    border-radius: 0;
+    color: white;
+    height: 100%;
+    margin: 0; }
 
 .primary-button {
-  box-shadow: inset 3px -5px #db7700;
+  box-shadow: inset 3px -3px #db7700;
   background-color: #ff8a00; }
   .primary-button:active {
     box-shadow: none;
     opacity: 1;
     background-color: #ff8a00;
-    -webkit-transform: scale(0.999);
     transform: scale(0.999); }
 
 .secondary-button {
-  box-shadow: inset 3px -5px #c5c5c5;
+  box-shadow: inset 3px -3px #c5c5c5;
   background-color: #d7d7d7; }
   .secondary-button:active {
     box-shadow: none;
     opacity: 1;
     background-color: #d7d7d7;
-    -webkit-transform: scale(0.999);
     transform: scale(0.999); }
+
+.page--full_bg__content {
+  background-image: url(../img/home_compressed.jpg) !important;
+  background-size: 150% 220% !important; }
