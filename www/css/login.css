@@ -22,3 +22,6 @@
     .login-form {
       width: 40%;
       left: 30%; } }
+
+.forgot-password {
+  color: gray !important; }

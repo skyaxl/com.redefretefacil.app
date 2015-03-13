@@ -6,16 +6,15 @@
 .navigation-bar * {
   color: white !important; }
 
-.tab-bar {
-  height: 9%; }
-  .tab-bar .tab-bar__item {
-    height: 100%;
-    padding: 0; }
-  .tab-bar .button {
-    border-radius: 0;
-    color: white;
-    height: 100%;
-    margin: 0; }
+.bottom-bar .col {
+  height: 100% !important; }
+.bottom-bar .row {
+  height: 100% !important; }
+.bottom-bar .button {
+  border-radius: 0;
+  color: white;
+  height: 100% !important;
+  margin: 0; }
 
 .primary-button {
   box-shadow: inset 3px -3px #db7700;
@@ -38,3 +37,27 @@
 .page--full_bg__content {
   background-image: url(../img/home_compressed.jpg) !important;
   background-size: 150% 220% !important; }
+
+.input-container {
+  position: relative; }
+  .input-container::after {
+    width: 1px;
+    height: 5px;
+    content: " ";
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .input-container::before {
+    width: 1px;
+    height: 5px;
+    content: " ";
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .input-container input {
+    clear: none; }
+
+.full-height {
+  height: 100% !important; }

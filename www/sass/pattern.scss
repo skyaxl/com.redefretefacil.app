@@ -11,17 +11,18 @@
     color: $header-forecolor !important;
 }
 
-.tab-bar {
-    height: 9%;
-    .tab-bar__item {
-        height: 100%;
-        padding: 0;
+.bottom-bar {
+    .col {
+        @include full-height();
+    }
+    .row {
+        @include full-height();
     }
     .button {
         @include reset-border-radius();
         color: $tab-bar-button-fore-color;
-        height: 100%;
-        margin:0;
+        @include full-height();
+        margin: 0;
     }
 }
 
@@ -42,4 +43,23 @@
 .page--full_bg__content {
     background-image: url(../img/home_compressed.jpg) !important;
     background-size: 150% 220% !important;
+}
+
+.input-container {
+    position: relative;
+    &::after {
+        @include input-sides-border();
+        right: 0;
+    }
+    &::before {
+        @include input-sides-border();
+        left: 0;
+    }
+    input {
+        clear: none;
+    }
+}
+
+.full-height {
+    @include full-height();
 }

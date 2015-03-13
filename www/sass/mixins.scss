@@ -1,5 +1,5 @@
 @mixin buttonShadowAndColor($shadow) {
-    box-shadow:  inset 3px -3px darken($shadow, 7%);
+    box-shadow: inset 3px -3px darken($shadow, 7%);
     background-color: $shadow;
 }
 
@@ -18,4 +18,17 @@
 @mixin horizontal-center-align() {
     margin-left: auto;
     margin-right: auto;
+}
+
+@mixin full-height(){
+    height: 100% !important;
+}
+
+@mixin input-sides-border() {
+    width: 1px;
+    height: 5px;
+    content: " ";
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
 }

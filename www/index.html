@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="styles/app.css" />
     <link rel="stylesheet" href="css/pattern.css" />
     <link rel="stylesheet" href="css/login.css" />
-
+    <link rel="stylesheet" href="css/schedule.css" />
     <script src="lib/onsen/js/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
-
-    <script src="cordova.js"></script>
-
     <script src="app/app.js">
     </script>
 
@@ -26,14 +23,16 @@
 <body>
     <ons-navigator animation="slide" var="navi">
         <ons-page modifier="full_bg">
-            <div class="tab-bar" id="first-tab-bar">
-                <ons-col class="tab-bar__item">
-                    <button class="button button--large secondary-button">Cadastro</button>
-                </ons-col>
-                <ons-col class="tab-bar__item">
-                    <button class="button button--large primary-button" ng-click="navi.pushPage('app/views/login/login.html')">Entrar</button>
-                </ons-col>
-            </div>
+            <ons-bottom-toolbar id="first-tab-bar">
+                <ons-row>
+                    <ons-col>
+                        <button class="button button--large secondary-button">Cadastro</button>
+                    </ons-col>
+                    <ons-col>
+                        <button class="button button--large primary-button" ng-click="navi.pushPage('app/views/login/login.html')">Entrar</button>
+                    </ons-col>
+                </ons-row>
+            </ons-bottom-toolbar>
         </ons-page>
     </ons-navigator>
 </body>
