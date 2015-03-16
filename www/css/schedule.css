@@ -1,19 +1,27 @@
 .schedule {
   position: relative;
-  width: 80%;
-  min-height: 80px;
+  width: 85%;
+  min-height: 85px;
   margin: 10px auto 0 auto; }
   .schedule .row, .schedule .truck {
-    height: 80px; }
-  .schedule .truck {
-    color: lightgray !important; }
-    .schedule .truck .ons-icon {
-      font-size: 3em;
-      clear: both;
-      margin: 0 auto 0 auto; }
-    .schedule .truck h5 {
-      margin: 0;
-      padding: 0; }
+    height: 85px; }
+  .schedule .truck .ons-icon {
+    font-size: 3em;
+    clear: both;
+    margin: 0 auto 0 auto; }
+  .schedule .truck h5 {
+    margin: 0;
+    padding: 0; }
+  .schedule .title {
+    margin: 0;
+    padding: 0;
+    vertical-align: text-bottom;
+    text-align: center;
+    margin-left: 5px;
+    height: 100%; }
 
 .schedule.free .truck {
-  background-color: #ff5a00 !important; }
+  background-color: #ff5a00 !important;
+  color: #ffdecc; }
+.schedule.free .title {
+  color: #ff5a00; }

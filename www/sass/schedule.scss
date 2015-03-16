@@ -2,15 +2,13 @@
 @import 'variables';
 .schedule {
     position: relative;
-    width: 80%;
+    width: 85%;
     min-height: $schedule-min-height;
     margin: 10px auto 0 auto;
     .row, .truck {
         height: $schedule-min-height;
     }
     .truck {
-        color: lightgray !important;
-        
         .ons-icon {
             font-size: 3em;
             clear: both;
@@ -21,11 +19,22 @@
             padding: 0;
         }
     }
+    .title {
+        margin: 0;
+        padding: 0;
+        vertical-align: text-bottom;
+        text-align: center;
+        margin-left: 5px;
+        height: 100%;
+    }
 }
 
 .schedule.free {
     .truck {
         background-color: $schedule-truck-free !important;
+        color: lighten($schedule-truck-free, 40%);
     }
-    
+    .title {
+        color: $schedule-truck-free;
+    }
 }
