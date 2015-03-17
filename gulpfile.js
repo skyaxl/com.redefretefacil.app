@@ -17,7 +17,7 @@ gulp.watch('./www/sass/*.scss', ['sass']);
 ////////////////////
 // default
 ////////////////////
-gulp.task('default', $.taskListing.withFilters(null, 'default'));
+//gulp.task('default', $.taskListing.withFilters(null, 'default'));
 
 ////////////////////
 // compile-stylus
@@ -91,7 +91,7 @@ gulp.task('serve', ['build', 'browser-sync'], function () {
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: __dirname + '/www/',
+            baseDir:  __dirname +  '/www/',
             directory: true
         },
         ghostMode: false,

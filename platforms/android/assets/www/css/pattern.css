@@ -1,0 +1,63 @@
+.navigation-bar {
+  background-color: #1fbdbe;
+  width: 100%;
+  color: white !important; }
+
+.navigation-bar * {
+  color: white !important; }
+
+.bottom-bar .col {
+  height: 100% !important; }
+.bottom-bar .row {
+  height: 100% !important; }
+.bottom-bar .button {
+  border-radius: 0;
+  color: white;
+  height: 100% !important;
+  margin: 0; }
+
+.primary-button {
+  box-shadow: inset 3px -3px #db7700;
+  background-color: #ff8a00; }
+  .primary-button:active {
+    box-shadow: none;
+    opacity: 1;
+    background-color: #ff8a00;
+    transform: scale(0.999); }
+
+.secondary-button {
+  box-shadow: inset 3px -3px #c5c5c5;
+  background-color: #d7d7d7; }
+  .secondary-button:active {
+    box-shadow: none;
+    opacity: 1;
+    background-color: #d7d7d7;
+    transform: scale(0.999); }
+
+.page--full_bg__content {
+  background-image: url(../img/home_compressed.jpg) !important;
+  background-size: 150% 220% !important; }
+
+.input-container {
+  position: relative; }
+  .input-container::after {
+    width: 1px;
+    height: 5px;
+    content: " ";
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .input-container::before {
+    width: 1px;
+    height: 5px;
+    content: " ";
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .input-container input {
+    clear: none; }
+
+.full-height {
+  height: 100% !important; }
