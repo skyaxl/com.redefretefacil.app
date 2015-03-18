@@ -9,6 +9,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <platform name="android">
-    </platform>
+    <platform name="android"></platform>
 </widget>
