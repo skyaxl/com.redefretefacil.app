@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf) format('truetype'); }
+
+* {
+  font-family: Roboto; }
+
 .navigation-bar {
   background-color: #1fbdbe;
   width: 100%;

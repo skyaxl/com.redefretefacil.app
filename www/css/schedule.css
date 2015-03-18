@@ -1,19 +1,29 @@
 .schedule {
   position: relative;
-  width: 90%;
   min-height: 10%;
+  width: 90%;
   margin: 10px auto 0 auto;
   background-color: #ffffff;
+  display: block;
+  border: solid 1px #f2f2f2;
   box-shadow: #e6e6e6 1px 5px; }
   .schedule .row, .schedule .truck {
     height: 10%; }
-  .schedule .truck .ons-icon {
-    font-size: 3em;
-    clear: both;
-    margin: 0 auto 0 auto; }
-  .schedule .truck h5 {
-    margin: 0;
-    padding: 0; }
+  .schedule .truck {
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 5px; }
+    .schedule .truck [class*="flaticon-"] {
+      font-size: 3em;
+      clear: both;
+      margin: 0 auto 0 auto;
+      top: 0.2em;
+      position: relative; }
+    .schedule .truck p {
+      margin: 0;
+      padding: 0;
+      font-size: 1em; }
+    .schedule .truck:active {
+      opacity: 1 !important; }
   .schedule .container {
     margin: 0;
     padding: 0 0 0 5px;
@@ -21,10 +31,32 @@
     text-align: center;
     height: 100% !important; }
   .schedule .options {
-    float: right; }
+    float: right;
+    color: #ababab !important;
+    font-size: 1em;
+    top: 0;
+    position: absolute; }
+  .schedule:active {
+    box-shadow: 0 0 transparent; }
 
 .schedule.free .truck {
-  background-color: #ff5a00 !important;
-  color: #ffdecc; }
+  background-color: #ff5a00 !important; }
 .schedule.free .title {
   color: #ff5a00; }
+
+.schedule.success .truck {
+  background-color: #47db25; }
+.schedule.success .title {
+  color: #47db25; }
+
+.big-notification {
+  background-color: #47db25;
+  box-shadow: #e6e6e6 1px 5px;
+  color: #fff;
+  width: 80%;
+  padding: 2% 5% 0 5%;
+  margin: 10px auto 0 auto;
+  min-height: 20%; }
+  .big-notification p {
+    text-align: center;
+    font-size: 1.2em; }

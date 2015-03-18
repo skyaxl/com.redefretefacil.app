@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin buttonShadowAndColor($shadow) {
     box-shadow: inset 3px -3px darken($shadow, 7%);
     background-color: $shadow;
@@ -20,7 +22,7 @@
     margin-right: auto;
 }
 
-@mixin full-height(){
+@mixin full-height() {
     height: 100% !important;
 }
 
@@ -31,4 +33,12 @@
     background-color: #ddd;
     position: absolute;
     bottom: 0;
+}
+
+@mixin box() {
+    box-shadow: darken(#ffffff, 10%) 1px 5px;
+}
+
+@mixin sucess-box() {
+    background-color: $success-color;
 }

@@ -1,6 +1,15 @@
 @import 'variables';
 @import 'reset';
 @import 'mixins';
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype'),
+}
+
+* {
+    font-family: Roboto;
+}
+
 .navigation-bar {
     background-color: $header-backcolor;
     width: $full-width;
