@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbfbd9e1-7cfc-437b-ac12-febf182f13ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/views/home/home.html" afterPath="$PROJECT_DIR$/www/app/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/login.css" afterPath="$PROJECT_DIR$/www/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/pattern.css" afterPath="$PROJECT_DIR$/www/css/pattern.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/schedule.css" afterPath="$PROJECT_DIR$/www/css/schedule.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/sass/schedule.scss" afterPath="$PROJECT_DIR$/www/sass/schedule.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/sass/variables.scss" afterPath="$PROJECT_DIR$/www/sass/variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="com.redefretefacil.app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,17 +56,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="variables.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/sass/variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.403481" vertical-offset="0" max-vertical-offset="632">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="357">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LA_RedeFreteFacil_App_Rede_02j.jpg" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LA_RedeFreteFacil_App_Rede_02j.jpg" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LA_RedeFreteFacil_App_Rede_02j.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -277,6 +269,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -314,6 +307,9 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fbfbd9e1-7cfc-437b-ac12-febf182f13ee" name="Default" comment="" />
@@ -325,7 +321,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1548" height="842" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -398,11 +394,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LA_RedeFreteFacil_App_Rede_02j.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/sass/mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="663">
@@ -437,10 +428,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/sass/variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.403481" vertical-offset="0" max-vertical-offset="632">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="357">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LA_RedeFreteFacil_App_Rede_02j.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
