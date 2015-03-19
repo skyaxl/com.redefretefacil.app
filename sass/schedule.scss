@@ -15,6 +15,7 @@
     .truck {
         color: rgba(255, 255, 255, 0.7);
         padding-top: 5px;
+        height: 100%;
         [class*="flaticon-"] {
             font-size: 3em;
             clear: both;
@@ -34,9 +35,12 @@
     .container {
         margin: 0;
         padding: 0 0 0 5px;
-        vertical-align: text-bottom;
-        text-align: center;
         @include full-height();
+        h5 {
+            margin: 0;
+            vertical-align: middle;
+            text-align: center;
+        }
     }
     .options {
         float: right;
@@ -61,7 +65,7 @@
 
 .schedule.success {
     .truck {
-         @include sucess-box();
+        @include sucess-box();
     }
     .title {
         color: $success-color;

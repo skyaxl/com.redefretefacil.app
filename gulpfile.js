@@ -12,7 +12,7 @@ var autoprefixer = require('autoprefixer-core');
 ////////////////////
 gulp.task('build', ['compile-stylus', 'jshint']);
 
-gulp.watch('./www/sass/*.scss', ['sass']);
+gulp.watch('./sass/*.scss', ['sass']);
 
 ////////////////////
 // default
@@ -91,7 +91,7 @@ gulp.task('serve', ['build', 'browser-sync'], function () {
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir:  __dirname +  '/www/',
+            baseDir: __dirname + '/www/',
             directory: true
         },
         ghostMode: false,
@@ -108,6 +108,7 @@ gulp.task('browser-sync', function () {
     }, function () {
         browserSync.reload();
     });
+
 });
 
 ////////////////////
@@ -146,11 +147,13 @@ function jshintNotify() {
 
 gulp.task('sass', function () {
 
-    gulp.src('./www/sass/*.scss')
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
+    gulp.src('./sass/*.scss')
+        .pipe(postcss([autoprefixer({
+            browsers: ['last 2 version']
+        })]))
         .pipe(sass({
             sync: true
         }))
-        
-        .pipe(gulp.dest('./www/css'));
+
+    .pipe(gulp.dest('./www/css'));
 });

@@ -1,0 +1,41 @@
+.page--menu-page__background {
+  background-color: #333; }
+
+.page--menu-page__content {
+  color: white; }
+
+.menu-close > .toolbar-button {
+  color: #999999; }
+
+.menu-list:first-child, .menu-list:last-child, .menu-list .menu-item {
+  background-color: transparent;
+  background-image: none !important;
+  border-color: transparent;
+  color: #fff; }
+
+.menu-item {
+  padding: 0 0 0 20px;
+  line-height: 52px;
+  height: 52px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px; }
+
+.menu-item:active {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.menu-notification {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+  min-width: 16px;
+  font-weight: 600; }
+
+.bottom-menu-list:first-child, .bottom-menu-list:last-child, .bottom-menu-list .bottom-menu-item {
+  border-color: #393939;
+  background-color: transparent;
+  background-image: none !important;
+  color: #ccc; }
+
+.bottom-menu-item:active {
+  background-color: rgba(255, 255, 255, 0.1); }
