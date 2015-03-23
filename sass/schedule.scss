@@ -1,87 +1,96 @@
 @import 'mixins';
 @import 'variables';
+
 .schedule {
-    position: relative;
-    min-height: $schedule-min-height;
-    width: 90%;
-    margin: 10px auto 0 auto;
-    background-color: #ffffff;
-    display: block;
-    border: solid 1px darken(#ffffff, 5%);
-    @include box();
-    .row, .truck {
-        height: $schedule-min-height;
+  position: relative;
+  min-height: $schedule-min-height;
+  width: 90%;
+  margin: 10px auto 0 auto;
+  background-color: #ffffff;
+  display: block;
+  border: solid 1px darken(#ffffff, 5%);
+  @include box();
+  .row, .truck {
+    height: $schedule-min-height;
+  }
+  .truck {
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 5px;
+    height: 100%;
+    [class*="flaticon-"] {
+      font-size: 3em;
+      clear: both;
+      margin: 0 auto 0 auto;
+      top: 0.2em;
+      position: relative;
     }
-    .truck {
-        color: rgba(255, 255, 255, 0.7);
-        padding-top: 5px;
-        height: 100%;
-        [class*="flaticon-"] {
-            font-size: 3em;
-            clear: both;
-            margin: 0 auto 0 auto;
-            top: 0.2em;
-            position: relative;
-        }
-        p {
-            margin: 0;
-            padding: 0;
-            font-size: 1em;
-        }
-        &:active {
-            opacity: 1 !important;
-        }
-    }
-    .container {
-        margin: 0;
-        padding: 0 0 0 5px;
-        @include full-height();
-        h5 {
-            margin: 0;
-            vertical-align: middle;
-            text-align: center;
-        }
-    }
-    .options {
-        float: right;
-        color: #ababab !important;
-        font-size: 1em;
-        top: 0;
-        position: absolute;
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 1em;
     }
     &:active {
-        box-shadow: 0 0 transparent;
+      opacity: 1 !important;
     }
+  }
+
+  .container {
+    margin: 0;
+    padding: 0 0 0 5px;
+    @include full-height();
+
+    .title {
+      margin: 1.2em 0 0 0;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  .options {
+    float: right;
+    color: #ababab !important;
+    font-size: 17px;
+    top: -5%;
+    position: absolute;
+  }
+  &:active {
+    box-shadow: 0 0 transparent;
+  }
 }
 
 .schedule.free {
-    .truck {
-        background-color: $schedule-truck-free !important;
-    }
+  .container {
     .title {
-        color: $schedule-truck-free;
+      color: $schedule-truck-free;
+      margin-top: 1.5em
     }
+
+  }
+
+  .truck {
+    background-color: $schedule-truck-free !important;
+  }
 }
 
 .schedule.success {
-    .truck {
-        @include sucess-box();
-    }
-    .title {
-        color: $success-color;
-    }
+  .truck {
+    @include sucess-box();
+  }
+  .title {
+    color: $success-color;
+  }
 }
 
 .big-notification {
-    @include sucess-box();
-    @include box();
-    color: #fff;
-    width: 80%;
-    padding: 2% 5% 0 5%;
-    margin: 10px auto 0 auto;
-    min-height: $schedule-min-height*2;
-    p {
-        text-align: center;
-        font-size: 1.2em;
-    }
+  @include sucess-box();
+  @include box();
+  color: #fff;
+  width: 80%;
+  padding: 0.5% 5% 0 5%;
+  margin: 10px auto 0 auto;
+  min-height: $schedule-min-height*1.5;
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
 }

@@ -1,6 +1,6 @@
-
 <ons-page>
-    <ons-sliding-menu menu-page="app/views/shared/menu.html" main-page="dashboard.html" side="left" var="menu" type="reveal" max-slide-distance="260px" swipable="true">
+    <ons-sliding-menu menu-page="app/views/shared/menu.html" main-page="dashboard.html" side="left" var="menu"
+                      type="reveal" max-slide-distance="260px" swipable="true">
     </ons-sliding-menu>
     <ons-template id="dashboard.html">
         <ons-page ng-controller="dashboardController as vm">
@@ -35,6 +35,7 @@
                         <ons-button modifier="large" class="truck">
                             <i class="flaticon-truck">
                             </i>
+
                             <p>{{truck.plate}}</p>
                         </ons-button>
                     </ons-col>
@@ -44,7 +45,7 @@
                         </div>
                     </ons-col>
                     <ons-col width="7%">
-                        <ons-button modifier="quiet" class=" right options">
+                        <ons-button modifier="quiet" class="right options">
                             <ons-icon icon="fa-ellipsis-v">
 
                             </ons-icon>
@@ -59,18 +60,23 @@
                         <ons-button modifier="large" class="truck">
                             <i class="flaticon-truck">
                             </i>
+
                             <p>{{schedule.truck.plate}}</p>
                         </ons-button>
                     </ons-col>
                     <ons-col width="58%">
                         <div class="container">
-                            <h5 class="title">{{schedule.date + '(' + schedule.moment.format('dddd') +')' }} <br>
-                                                       <small>{{schedule.location}}</small></h6>
+                            <h6 class="title">{{schedule.moment.format('DD/MM') + '(' + schedule.moment.format('dddd') +')' }}
+                                <ons-icon icon="fa-check-circle ">
 
+                                </ons-icon>
+                                <br>
+                                <small>{{schedule.location}}</small>
+                            </h6>
                         </div>
                     </ons-col>
                     <ons-col width="7%">
-                        <ons-button modifier="quiet" class=" right options">
+                        <ons-button modifier="quiet" class="right options">
                             <ons-icon icon="fa-ellipsis-v">
 
                             </ons-icon>
