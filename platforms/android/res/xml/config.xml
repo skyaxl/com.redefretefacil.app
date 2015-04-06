@@ -4,7 +4,7 @@
     <feature name="SMS">
         <param name="android-package" value="com.rjfun.cordova.sms.SMSPlugin" />
     </feature>
-    <name>HelloCordova</name>
+    <name>Rede Frete Facil</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>

@@ -3,16 +3,20 @@
                       type="reveal" max-slide-distance="260px" swipable="true">
     </ons-sliding-menu>
     <ons-template id="dashboard.html">
-        <ons-page ng-controller="dashboardController as vm">
+        <ons-page ng-controller="dashboardController as vm" >
             <ons-toolbar>
                 <div class="left">
-                    <ons-toolbar-button ng-click="menu.toggleMenu()">
+                    <ons-toolbar-button ng-click="menu.toggleMenu()" class="menu-button">
                         <ons-icon icon="ion-navicon">
 
                         </ons-icon>
                     </ons-toolbar-button>
+                    <img src="../img/logo.png" style="max-width: 100%; max-height: 100%" alt=""/>
+
                 </div>
-                <div class="center">Rede Frete Fácil</div>
+                <div class="center">
+                    <span>Rede Frete Fácil</span>
+                </div>
                 <div class="right">
                     <ons-toolbar-button ons-if-platform="android">
                         <ons-icon icon="fa-ellipsis-v">
@@ -30,7 +34,7 @@
             </div>
 
             <button class="schedule free" ng-repeat="truck in vm.notScheduledTrucks">
-                <ons-row>
+                <div class="row">
                     <ons-col width="35%">
                         <ons-button modifier="large" class="truck">
                             <i class="flaticon-truck">
@@ -51,11 +55,11 @@
                             </ons-icon>
                         </ons-button>
                     </ons-col>
-                </ons-row>
+                </div>
             </button>
 
-            <div class="schedule success" ng-repeat="schedule in vm.schedules">
-                <ons-row>
+            <button class="schedule success" ng-repeat="schedule in vm.schedules">
+                <div class="row">
                     <ons-col width="35%">
                         <ons-button modifier="large" class="truck">
                             <i class="flaticon-truck">
@@ -66,7 +70,8 @@
                     </ons-col>
                     <ons-col width="58%">
                         <div class="container">
-                            <h6 class="title">{{schedule.moment.format('DD/MM') + '(' + schedule.moment.format('dddd') +')' }}
+                            <h6 class="title">{{schedule.moment.format('DD/MM') + '(' + schedule.moment.format('dddd')
+                                +')' }}
                                 <ons-icon icon="fa-check-circle ">
 
                                 </ons-icon>
@@ -77,13 +82,13 @@
                     </ons-col>
                     <ons-col width="7%">
                         <ons-button modifier="quiet" class="right options">
-                            <ons-icon icon="fa-ellipsis-v">
+                            <ons-icon icon="fa-ellipsis-v"  ng-init="vm.fix()">
 
                             </ons-icon>
                         </ons-button>
                     </ons-col>
-                </ons-row>
-            </div>
+                </div>
+            </button>
 
 
         </ons-page>

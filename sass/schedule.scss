@@ -5,35 +5,35 @@
   position: relative;
   min-height: $schedule-min-height;
   width: 90%;
+  padding: 0;
   margin: 10px auto 0 auto;
   background-color: #ffffff;
   display: block;
   border: solid 1px darken(#ffffff, 5%);
-  @include box();
-  .row, .truck {
+   @include box();
+  .row{
     height: $schedule-min-height;
   }
   .truck {
     color: rgba(255, 255, 255, 0.7);
-    padding-top: 5px;
+    padding-top: 20%;
     height: 100%;
     [class*="flaticon-"] {
-      font-size: 3em;
+      font-size: 300%;
       clear: both;
       margin: 0 auto 0 auto;
-      top: 0.2em;
+      top: 20%;
       position: relative;
     }
     p {
-      margin: 0;
+      margin: 2% 0 0 0;
       padding: 0;
-      font-size: 1em;
+      font-size: 110%;
     }
     &:active {
       opacity: 1 !important;
     }
   }
-
   .container {
     margin: 0;
     padding: 0 0 0 5px;
@@ -55,6 +55,17 @@
   &:active {
     box-shadow: 0 0 transparent;
   }
+
+
+  @media (min-width: $large-device-width) {
+    width: 45%;
+    margin-left: 3%;
+    float:left;
+    clear:none;
+    position:relative;
+  }
+
+
 }
 
 .schedule.free {
@@ -84,13 +95,12 @@
   @include sucess-box();
   @include box();
   color: #fff;
-  width: 80%;
-  padding: 0.5% 5% 0 5%;
+  width: 89%;
+  padding: 0.5% 5% 2% 0.5%;
   margin: 10px auto 0 auto;
   min-height: $schedule-min-height*1.5;
   p {
     text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 5%;
+    font-size: 150%;
   }
 }

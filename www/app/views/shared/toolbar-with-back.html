@@ -1,10 +1,14 @@
 <ons-toolbar>
     <div class="left">
         <ons-back-button>
-            <span ons-if-platform="ios">Back</span>
+            <!--<span ons-if-platform="ios">Back</span>-->
         </ons-back-button>
+        <img src="../img/logo.png" style="max-width: 100%; max-height: 100%" alt=""/>
+
     </div>
-    <div class="center">{{pageTitle}}</div>
+    <div class="center">
+       <span> {{pageTitle}}</span>
+    </div>
     <div class="right">
         <ons-toolbar-button ons-if-platform="android">
             <ons-icon icon="fa-ellipsis-v">

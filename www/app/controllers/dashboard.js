@@ -15,6 +15,9 @@
              });
          }).ToArray();
 
+         this.fix = function(){
+
+         };
 
      };
      

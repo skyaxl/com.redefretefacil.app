@@ -1,67 +1,9 @@
-<style>
-    .page--menu-page__background {
-        background-color: #333;
-    }
-    
-    .page--menu-page__content {
-        color: white;
-    }
-    
-    .menu-close,
-    .menu-close > .toolbar-button {
-        color: #999;
-    }
-    
-    .menu-list,
-    .menu-item:first-child,
-    .menu-item:last-child,
-    .menu-item {
-        background-color: transparent;
-        background-image: none !important;
-        border-color: transparent;
-        color: #fff;
-    }
-    
-    .menu-item {
-        padding: 0 0 0 20px;
-        line-height: 52px;
-        height: 52px;
-        text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
-    }
-    
-    .menu-item:active {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .menu-notification {
-        display: inline-block;
-        margin-top: 12px;
-        font-size: 14px;
-        height: 16px;
-        line-height: 16px;
-        min-width: 16px;
-        font-weight: 600;
-    }
-    
-    .bottom-menu-list,
-    .bottom-menu-item:first-child,
-    .bottom-menu-item:last-child,
-    .bottom-menu-item {
-        border-color: #393939;
-        background-color: transparent;
-        background-image: none !important;
-        color: #ccc;
-    }
-    
-    .bottom-menu-item:active {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-</style>
 <ons-page>
-    <ons-sliding-menu menu-page="app/views/shared/menu.html" main-page="dashboard.html" side="left" var="menu" type="reveal" max-slide-distance="260px" swipable="true">
+    <ons-sliding-menu menu-page="app/views/shared/menu.html" main-page="dashboard.html" side="left" var="menu"
+                      type="reveal" max-slide-distance="260px" swipable="true">
     </ons-sliding-menu>
     <ons-template id="dashboard.html">
-        <ons-page>
+        <ons-page ng-controller="dashboardController as vm">
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button ng-click="menu.toggleMenu()">
@@ -80,22 +22,61 @@
 
                 </div>
             </ons-toolbar>
-            <div class="schedule free">
+
+            <div class="big-notification">
+                <p>
+                    Mantenha seus caminhões agendados e aumente suas oportunidades.
+                </p>
+            </div>
+
+            <button class="schedule free" ng-repeat="truck in vm.notScheduledTrucks">
                 <ons-row>
                     <ons-col width="35%">
                         <ons-button modifier="large" class="truck">
-                            <ons-icon icon="fa-truck">
-                            </ons-icon>
-                            <h5>AAA-1111</h5>
+                            <i class="flaticon-truck">
+                            </i>
+
+                            <p>{{truck.plate}}</p>
                         </ons-button>
                     </ons-col>
                     <ons-col width="58%">
-                       <div class="container">
-                           <h5 class="title">Agendar Caminhão</h5>
-                       </div>
+                        <div class="container">
+                            <h5 class="title">Agendar Caminhão</h5>
+                        </div>
                     </ons-col>
                     <ons-col width="7%">
-                        <ons-button modifier="quiet" class="right" class="options">
+                        <ons-button modifier="quiet" class="right options">
+                            <ons-icon icon="fa-ellipsis-v">
+
+                            </ons-icon>
+                        </ons-button>
+                    </ons-col>
+                </ons-row>
+            </button>
+
+            <div class="schedule success" ng-repeat="schedule in vm.schedules">
+                <ons-row>
+                    <ons-col width="35%">
+                        <ons-button modifier="large" class="truck">
+                            <i class="flaticon-truck">
+                            </i>
+
+                            <p>{{schedule.truck.plate}}</p>
+                        </ons-button>
+                    </ons-col>
+                    <ons-col width="58%">
+                        <div class="container">
+                            <h6 class="title">{{schedule.moment.format('DD/MM') + '(' + schedule.moment.format('dddd') +')' }}
+                                <ons-icon icon="fa-check-circle ">
+
+                                </ons-icon>
+                                <br>
+                                <small>{{schedule.location}}</small>
+                            </h6>
+                        </div>
+                    </ons-col>
+                    <ons-col width="7%">
+                        <ons-button modifier="quiet" class="right options">
                             <ons-icon icon="fa-ellipsis-v">
 
                             </ons-icon>
