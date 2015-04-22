@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/schedule.css" />
     <link rel="stylesheet" href="css/flaticons.css" />
     <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/signin.css" />
     <script src="js/linq.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/moment/locale/pt-br.js"></script>
@@ -29,6 +31,7 @@
     <script src="app/app.js"></script>
     <script src="app/factories/trucksStubs.js"></script>
     <script src="app/controllers/dashboard.js"></script>
+    <script src="app/controllers/signin.js"></script>
 </head>
 
 <body>
@@ -37,7 +40,7 @@
             <ons-bottom-toolbar id="first-tab-bar">
                 <ons-row>
                     <ons-col>
-                        <button class="button button--large secondary-button">Cadastro</button>
+                        <button class="button button--large secondary-button" ng-click="navi.pushPage('app/views/signin/profile.html')">Cadastro</button>
                     </ons-col>
                     <ons-col>
                         <button class="button button--large primary-button" ng-click="navi.pushPage('app/views/login/login.html')">Entrar</button>

@@ -1,0 +1,50 @@
+@import 'mixins';
+@import 'variables';
+
+.res-row {
+  width: 100%;
+  .input-container input, button, select{
+    width: 96%;
+    margin: 0 2% 0 2%;
+  }
+}
+  @for $i from 1 through 20 {
+    .sm-#{$i}
+    {
+      @media (max-width: $extra-small-device-width)
+      {
+         width: 5% * $i;
+      }
+    }
+    .xs-#{$i}
+    {
+      @media (max-width: $small-device-width)
+      {
+        width: 5% * $i;
+      }
+    }
+
+    .md-#{$i}
+    {
+      @media (max-width: $medium-device-width)
+      {
+        width: 5% * $i;
+      }
+    }
+
+    .lg-#{$i}
+    {
+      @media (min-width: $medium-device-width +1)
+      {
+        width: 5% * $i;
+      }
+    }
+
+
+
+  }
+
+
+
+
+

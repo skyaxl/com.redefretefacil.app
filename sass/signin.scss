@@ -1,0 +1,87 @@
+@import 'variables';
+
+.user-types{
+  border: none;
+}
+
+.radio-rede-frete-facil {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $secondary-button-color;
+  text-transform: uppercase;
+  min-height: 70px;
+  padding: 15px;
+  text-align: center;
+  color: $non-selected-color;
+  border-radius: 3px;
+  margin: 3% 2% 0 2%;
+  &:active{
+    background-color: $secondary-button-color;
+  }
+  .feature{
+    font-size: 18px;
+    margin: 0 0 0 0;
+    font-weight: 700;
+    line-height: normal;
+}
+
+  input[type=radio]
+  {
+     display: none;
+  }
+  &.selected, &.selected:active{
+    background-color: $header-backcolor !important;
+    color: $header-forecolor;
+  }
+  span{
+    font-size: 11px;
+    width: 100%;
+    font-weight: 600;
+    line-height: 10px;
+
+  }
+
+
+  @media (min-width: $large-device-width) {
+    width: 100px;
+    margin-left: 3%;
+    float:left;
+    clear:none;
+    position:relative;
+
+  }
+}
+
+select {
+  height: 26px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+.select-container .back-arrow{
+  border: 5px solid transparent;
+  width: 5px;
+  float: right;
+  border-top-color:  $header-backcolor;
+  margin: -20px 0 1px 0px;
+}
+
+
+.form.signin{
+
+  input,textarea, select{
+    margin: 10px 0 5px 10px;
+    background: transparent;
+
+  }
+
+
+}
+
+
+
+
+
+

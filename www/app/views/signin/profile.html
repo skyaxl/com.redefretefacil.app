@@ -1,0 +1,49 @@
+<ons-page ng-init="pageTitle = 'Perfil'" ng-controller="signInController as signInViewModel">
+    <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <div class="form signin">
+            <ons-row class="res-row">
+                <div class="sm-20 input-container select-container">
+                      <select class="" ng-options="type.id as type.title for type in signInViewModel.usersType track by type.id" ng-model="signInViewModel.selectedUserType">
+                      </select>
+                     <div class="back-arrow">
+
+                     </div>
+                  </div>
+            </ons-row>
+        <ons-row class="res-row">
+            <div class="sm-20">
+                <div class="input-container">
+                    <input type="text" class="text-input text-input--underbar large" ng-model="signInViewModel.cliente.nome"  placeholder="Nome " value="">
+                </div>
+            </div>
+
+            <div class="sm-20">
+                <div class="input-container">
+                    <input type="text" class="text-input text-input--underbar large" ng-model="signInViewModel.cliente.documento"  placeholder="{{signInViewModel.getDocumentTypeName(signInViewModel.selectedUserType )}}" value="">
+                </div>
+            </div>
+            <div class="sm-20">
+                <div class="input-container"><input class="text-input text-input--underbar large" placeholder="Cidade" type="text"/></div>
+            </div>
+
+            <div class="sm-20">
+                <div class="input-container">
+                    <input type="email" class="text-input text-input--underbar large" placeholder="Email" value="">
+                </div>
+            </div>
+           <div class="sm-20">
+               <div class="input-container">
+                   <input type="password" class="text-input text-input--underbar large" placeholder="Senha" value="">
+               </div>
+           </div>
+        </ons-row>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <ons-bottom-toolbar>
+    <ons-button modifier="large" class="primary-button full-height" ng-click="navi.pushPage('app/views/login/forgot.html')">Avançar</ons-button>
+</ons-bottom-toolbar>
+
+</ons-page>

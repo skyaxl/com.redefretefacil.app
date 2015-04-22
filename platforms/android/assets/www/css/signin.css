@@ -1,0 +1,36 @@
+.user-types {
+  border: none; }
+
+.radio-rede-frete-facil {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #d7d7d7;
+  text-transform: uppercase;
+  min-height: 70px;
+  padding: 15px;
+  text-align: center;
+  color: #999999;
+  border-radius: 3px; }
+  .radio-rede-frete-facil:active {
+    background-color: #d7d7d7; }
+  .radio-rede-frete-facil .feature {
+    font-size: 18px;
+    margin: 0 0 0 0;
+    font-weight: 700;
+    line-height: normal; }
+  .radio-rede-frete-facil input[type=radio] {
+    display: none; }
+  .radio-rede-frete-facil.selected, .radio-rede-frete-facil.selected:active {
+    background-color: #1fbdbe !important;
+    color: white; }
+  .radio-rede-frete-facil span {
+    font-size: 11px;
+    width: 100%;
+    font-weight: 600;
+    line-height: 10px; }
+  @media (min-width: 1025px) {
+    .radio-rede-frete-facil {
+      width: 100px;
+      margin-left: 3%;
+      float: left;
+      clear: none;
+      position: relative; } }

@@ -2,20 +2,20 @@
     <ons-toolbar modifier="transparent"></ons-toolbar>
 
     <ons-list class="menu-list">
+
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+            <ons-icon icon="fa-calendar"></ons-icon>
+            Meus Agendamentos
+        </ons-list-item>
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
                 <i class="ons-icon fa fa-lg flaticon-truck">
                 </i>
             Meus Caminhões
         </ons-list-item>
 
-        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
-            <ons-icon icon="fa-calendar"></ons-icon>
-            Meus Agendamentos
-        </ons-list-item>
-
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
-            <ons-icon icon="fa-search-plus"></ons-icon>
-            Buscar Cargas
+            <ons-icon icon="fa-phone"></ons-icon>
+            Minhas Negociações
         </ons-list-item>
     </ons-list>
 
@@ -34,4 +34,5 @@
             Sair
         </ons-list-item>
     </ons-list>
+
 </ons-page>
