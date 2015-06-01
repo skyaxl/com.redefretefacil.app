@@ -25,3 +25,24 @@
 
 .forgot-password {
   color: gray !important; }
+
+.login-form.email {
+  top: 20% !important; }
+  .login-form.email .tel {
+    color: #1fbdbe;
+    font-weight: lighter; }
+
+.forgot-email-content {
+  color: #1fbdbe;
+  margin-top: 0px;
+  border-bottom: 1px solid lightgrey; }
+  .forgot-email-content i {
+    font-size: 170px; }
+  .forgot-email-content .title.gray {
+    color: lightgrey !important;
+    text-transform: none;
+    text-align: justify; }
+  .forgot-email-content .title {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: lighter; }

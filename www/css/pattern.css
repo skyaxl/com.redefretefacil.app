@@ -5,6 +5,9 @@
 * {
   font-family: Roboto; }
 
+input, textarea, a, p, h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto !important; }
+
 .navigation-bar {
   background-color: #1fbdbe;
   width: 100%;
@@ -24,7 +27,6 @@
   margin: 0; }
 
 .primary-button {
-  box-shadow: inset 3px -3px #db7700;
   background-color: #ff8a00; }
   .primary-button:active {
     box-shadow: none;
@@ -33,7 +35,6 @@
     transform: scale(0.999); }
 
 .secondary-button {
-  box-shadow: inset 3px -3px #c5c5c5;
   background-color: #d7d7d7; }
   .secondary-button:active {
     box-shadow: none;
@@ -41,12 +42,21 @@
     background-color: #d7d7d7;
     transform: scale(0.999); }
 
+.initial-button {
+  background-color: #116666; }
+  .initial-button:active {
+    box-shadow: none;
+    opacity: 1;
+    background-color: #116666;
+    transform: scale(0.999); }
+
 .page--full_bg__content {
   background-image: url(../img/home_compressed.jpg) !important;
   background-size: 150% 220% !important; }
 
 .input-container {
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #ddd; }
   .input-container::after {
     width: 1px;
     height: 5px;
@@ -64,7 +74,45 @@
     bottom: 0;
     left: 0; }
   .input-container input {
-    clear: none; }
+    clear: none;
+    padding-left: 1px;
+    padding-right: 1px; }
+  .input-container input, .input-container textarea {
+    background: transparent;
+    border: none !important; }
 
 .full-height {
   height: 100% !important; }
+
+select {
+  height: 26px;
+  border: none;
+  border-bottom: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent; }
+
+.ellipse-button {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); }
+
+.select-container {
+  height: 30px;
+  border-bottom: 1px solid #ddd; }
+  .select-container select {
+    border-color: #d7d7d7;
+    color: #a4a4a4;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0; }
+    .select-container select:active {
+      color: #1fbdbe; }
+  .select-container .back-arrow {
+    border: 7px solid transparent;
+    width: 1px;
+    float: right;
+    border-top-color: #d7d7d7;
+    margin: -7px -7px 0px 0px;
+    transform: rotate(-51deg);
+    -webkit-transform: rotate(-51deg); }

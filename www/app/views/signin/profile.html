@@ -1,49 +1,86 @@
-<ons-page ng-init="pageTitle = 'Perfil'" ng-controller="signInController as signInViewModel">
+<ons-page ng-init="pageTitle = 'Cadastro';"  ng-controller="signInController as signInViewModel">
     <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <form ng-submit="signInViewModel.validDocumento()" id="form-cadastro">
     <div class="form signin">
-            <ons-row class="res-row">
-                <div class="sm-20 input-container select-container">
-                      <select class="" ng-options="type.id as type.title for type in signInViewModel.usersType track by type.id" ng-model="signInViewModel.selectedUserType">
-                      </select>
-                     <div class="back-arrow">
-
-                     </div>
-                  </div>
-            </ons-row>
         <ons-row class="res-row">
-            <div class="sm-20">
-                <div class="input-container">
-                    <input type="text" class="text-input text-input--underbar large" ng-model="signInViewModel.cliente.nome"  placeholder="Nome " value="">
+            <div class=" sm-20 md-20  select-container">
+                <select class
+                        required
+                        ng-options="type.id as type.title for type in signInViewModel.usersType"
+                        ng-model="signInViewModel.cliente.categoria"
+                        >
+                    <option value="">Categoria</option>
+                </select>
+                <div class="back-arrow">
+
                 </div>
+            </div>
+        </ons-row>
+        <ons-row class="res-row">
+            <div class="sm-20 md-20">
+                <div class="input-container" input-container>
+                    <input type="text" class="text-input text-input--underbar large"
+                           ng-model="signInViewModel.cliente.nome"
+                           required placeholder="Nome " value="">
+                </div>
+            </div>
+        </ons-row>
+        <ons-row class="res-row">
+            <div class="sm-20 md-20">
+                <div class="input-container">
+                    <input type="text" class="text-input text-input--underbar large"
+                           ng-model="signInViewModel.cliente.documento"
+                           ng-if="!signInViewModel.cliente.categoria"
+                           required
+                           placeholder="CPF"
+                           mask="999.999.999-99"
+                           value="">
+                    <input type="text" class="text-input text-input--underbar large"
+                           ng-model="signInViewModel.cliente.documento"
+                           ng-if="!!signInViewModel.cliente.categoria"
+                           required
+                           placeholder="CNPJ"
+                           mask="999.999.999/9999-99"
+                           value="">
+                </div>
+            </div>
+        </ons-row>
+        <ons-row class="res-row">
+            <div class="sm-20 md-20">
+                <div class="input-container">
+                    <input class="text-input text-input--underbar large" placeholder="Cidade" ng-model="signInViewModel.cliente.cidade"  type="text" required/></div>
             </div>
 
-            <div class="sm-20">
-                <div class="input-container">
-                    <input type="text" class="text-input text-input--underbar large" ng-model="signInViewModel.cliente.documento"  placeholder="{{signInViewModel.getDocumentTypeName(signInViewModel.selectedUserType )}}" value="">
-                </div>
-            </div>
-            <div class="sm-20">
-                <div class="input-container"><input class="text-input text-input--underbar large" placeholder="Cidade" type="text"/></div>
-            </div>
+        </ons-row>
 
-            <div class="sm-20">
+        <ons-row class="res-row">
+            <div class="sm-20 md-20">
                 <div class="input-container">
-                    <input type="email" class="text-input text-input--underbar large" placeholder="Email" value="">
+                    <input type="email" required class="text-input text-input--underbar large"
+                           ng-model="signInViewModel.cliente.email"
+                           placeholder="Email" value="">
                 </div>
             </div>
-           <div class="sm-20">
-               <div class="input-container">
-                   <input type="password" class="text-input text-input--underbar large" placeholder="Senha" value="">
-               </div>
-           </div>
+        </ons-row>
+        <ons-row class="res-row">
+            <div class="sm-20 md-20">
+                <div class="input-container">
+                    <input type="password" required class="text-input text-input--underbar large"
+                           ng-model="signInViewModel.cliente.senha"
+                           placeholder="Senha" value="">
+                </div>
+            </div>
         </ons-row>
         <br>
         <br>
         <br>
         <br>
     </div>
+     <button type="submit" id="hidesub" ng-hide="true"></button>
+    </form>
     <ons-bottom-toolbar>
-    <ons-button modifier="large" class="primary-button full-height" ng-click="navi.pushPage('app/views/login/forgot.html')">Avançar</ons-button>
-</ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" onclick="document.getElementById('hidesub').click()">Avançar
 
+        </ons-button>
+    </ons-bottom-toolbar>
 </ons-page>

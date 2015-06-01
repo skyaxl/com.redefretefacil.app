@@ -1,0 +1,33 @@
+<ons-page ng-controller="signInController as signInVM" ng-init="console.log(veihcleActiveController)" class="finish-page" >
+    <form id="form-cadastro">
+        <div class="form signin">
+
+            <ons-row class="res-row">
+                <div class="finish-title-content">
+                    <div class="finish-title">
+                        <i class="icon-icone_mark"></i>
+                        <h5 class="title">
+                            {{signInVM.cliente.nome}}
+                        </h5>
+                    </div>
+                    <p class="title ">
+                        Você Já pode começar a utilizar a Rede Frete Fácil para conseguir mais oportunidades.
+                    </p>
+
+                </div>
+
+            </ons-row>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <button type="submit" id="hidesub3" ng-hide="true"></button>
+    </form>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="initial-button full-height" onclick="navi.pushPage('app/views/home/home.html');">Iniciar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

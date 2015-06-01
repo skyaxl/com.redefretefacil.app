@@ -1,0 +1,13 @@
+<ons-page ng-controller="signInController as veihcleActiveController" ng-init="console.log(veihcleActiveController)">
+
+    <ng-include ng-init="pageTitle = veihcleActiveController.pageVeiculoTitle" src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <form ng-submit="veihcleActiveController.validarVeiculo()" id="form-cadastro">
+        <ng-include src="'app/views/shared/veihcleForm.html'"></ng-include>
+        <button type="submit" id="hidesub3" ng-hide="true"></button>
+    </form>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" onclick="document.getElementById('hidesub3').click()">Avançar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

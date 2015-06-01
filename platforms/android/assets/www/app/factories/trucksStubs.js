@@ -1,38 +1,50 @@
 (function () {
     app.factory("trucks", function () {
 
-        return [{
-                id: 1,
-                plate: 'AAA-1234'
-                },
-            {
-                id: 2,
-                plate: 'BBB-1234'
-                }
-        ];
+        return [];
 
 
     });
 
     var schedulesStub = {};
-    schedulesStub.$inject = ['trucks']
+    schedulesStub.$inject = ['trucks'];
     schedulesStub = function (trucks) {
 
-        return [{
-                id: 1,
-                date: '01/04/2015',
-                truck: trucks[0],
-                location: 'Lages-SC',
-                moment: moment(this.date)
-           
-                }
-        ];
+        return [];
 
 
     };
+    var clienteStub = {};
+    clienteStub.$inject = ['trucks'];
+    clienteStub = function(trucks){
+        return {
+            veiculos : trucks
 
+        };
+    };
+
+    var clientesStub = {};
+    clientesStub.$inject = [];
+    clientesStub = function(){
+        return [
+            {
+                nome: 'Andrey',
+                email: 'andrey@rff',
+                telefone: '4988899630',
+                veiculos: [{
+                    plate: 'ALH1234'
+                }],
+                senha: '123'
+            }
+
+
+        ];
+    };
+
+
+    app.factory("clienteStub", clienteStub);
 
     app.factory("schedules", schedulesStub);
-
+    app.factory("clientesStub", clientesStub);
 
 }());

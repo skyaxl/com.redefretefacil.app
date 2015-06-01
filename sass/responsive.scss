@@ -11,14 +11,14 @@
   @for $i from 1 through 20 {
     .sm-#{$i}
     {
-      @media (max-width: $extra-small-device-width)
+      @media (max-width: $small-device-width)
       {
          width: 5% * $i;
       }
     }
     .xs-#{$i}
     {
-      @media (max-width: $small-device-width)
+      @media (max-width: $extra-small-device-width)
       {
         width: 5% * $i;
       }

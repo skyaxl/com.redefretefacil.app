@@ -1,74 +1,42 @@
-<ons-page>
-    <ons-sliding-menu menu-page="app/views/shared/menu.html" main-page="dashboard.html" side="left" var="menu"
-                      type="reveal" max-slide-distance="260px" swipable="true">
-    </ons-sliding-menu>
-    <ons-template id="dashboard.html">
-        <ons-page ng-controller="dashboardController as vm" >
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button ng-click="menu.toggleMenu()" class="menu-button">
-                        <ons-icon icon="ion-navicon">
+<ons-page ng-init="pageTitle = 'Rede Frete Fácil';showContext = true" ons-page ng-controller="dashboardController as vm">
 
-                        </ons-icon>
-                    </ons-toolbar-button>
-                    <img src="../img/logo.png" style="max-width: 100%; max-height: 100%" alt=""/>
+    <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
 
-                </div>
-                <div class="center">
-                    <span>Rede Frete Fácil</span>
-                </div>
-                <div class="right">
-                    <ons-toolbar-button ons-if-platform="android">
-                        <ons-icon icon="fa-ellipsis-v">
-
-                        </ons-icon>
-                    </ons-toolbar-button>
-
-                </div>
-            </ons-toolbar>
-
-            <div class="big-notification">
+            <div class="big-notification" ng-class="{'anime-hide' : animeHide}" ng-swipe-right="animeHide = true" >
                 <p>
                     Mantenha seus caminhões agendados e aumente suas oportunidades.
                 </p>
             </div>
 
-            <button class="schedule free" ng-repeat="truck in vm.notScheduledTrucks">
+            <button class="schedule free" ng-repeat="truck in vm.trucks" ng-if="!truck.scheduled" ng-click="vm.add(truck)">
                 <div class="row">
-                    <ons-col width="35%">
+                    <ons-col width="40%">
                         <ons-button modifier="large" class="truck">
-                            <i class="flaticon-truck">
+                            <i class="icon-icone_truck">
                             </i>
 
                             <p>{{truck.plate}}</p>
                         </ons-button>
                     </ons-col>
-                    <ons-col width="58%">
+                    <ons-col width="60%">
                         <div class="container">
                             <h5 class="title">Agendar Caminhão</h5>
                         </div>
                     </ons-col>
-                    <ons-col width="7%">
-                        <ons-button modifier="quiet" class="right options">
-                            <ons-icon icon="fa-ellipsis-v">
-
-                            </ons-icon>
-                        </ons-button>
-                    </ons-col>
                 </div>
             </button>
 
-            <button class="schedule success" ng-repeat="schedule in vm.schedules">
+            <div class="schedule success" id="schedule-{{$index}}" ng-repeat="schedule in vm.schedules">
                 <div class="row">
-                    <ons-col width="35%">
+                    <ons-col width="40%">
                         <ons-button modifier="large" class="truck">
-                            <i class="flaticon-truck">
+                            <i class="icon-icone_truck">
                             </i>
 
-                            <p>{{schedule.truck.plate}}</p>
+                            <p >{{schedule.truck.plate}}</p>
                         </ons-button>
                     </ons-col>
-                    <ons-col width="58%">
+                    <ons-col width="53%">
                         <div class="container">
                             <h6 class="title">{{schedule.moment.format('DD/MM') + '(' + schedule.moment.format('dddd')
                                 +')' }}
@@ -81,16 +49,12 @@
                         </div>
                     </ons-col>
                     <ons-col width="7%">
-                        <ons-button modifier="quiet" class="right options">
-                            <ons-icon icon="fa-ellipsis-v"  ng-init="vm.fix()">
+                        <ons-button modifier="quiet" class="right options" id="schedule-options-{{$index}}" ng-click="vm.popoveSchedule('#schedule-options-' + $index,schedule)">
+                            <ons-icon icon="ion-more" class="ellipse-button"  ng-init="vm.fix()">
 
                             </ons-icon>
                         </ons-button>
                     </ons-col>
                 </div>
-            </button>
-
-
-        </ons-page>
-    </ons-template>
+            </div>
 </ons-page>

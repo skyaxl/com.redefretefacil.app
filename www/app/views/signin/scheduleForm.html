@@ -1,0 +1,13 @@
+<ons-page ng-controller="signInController as signInVM" ng-init="console.log(veihcleActiveController)">
+
+    <ng-include ng-init="pageTitle = signInVM.pageVeiculoTitle" src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <form ng-submit="signInVM.validarAgendamento()" id="form-cadastro">
+        <ng-include ng-init="pageTitle = signInVM.pageVeiculoTitle" src="'app/views/shared/scheduleFormShared.html'"></ng-include>
+        <button type="submit" id="hidesub4" ng-hide="true"></button>
+    </form>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" onclick="document.getElementById('hidesub4').click()">Avançar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

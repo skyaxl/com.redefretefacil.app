@@ -10,6 +10,11 @@
     font-family: Roboto;
 }
 
+input,textarea,a,p,h1,h2,h3,h4,h5,h6
+{
+  font-family: Roboto !important;
+}
+
 .navigation-bar {
     background-color: $header-backcolor;
     width: $full-width;
@@ -49,14 +54,27 @@
     }
 }
 
+.initial-button{
+  @include buttonShadowAndColor(darken($header-backcolor,20%));
+  &:active {
+    @include active(darken($header-backcolor,20%));
+  }
+}
+
+
 .page--full_bg__content {
     background-image: url(../img/home_compressed.jpg) !important;
     background-size: 150% 220% !important;
 }
 
+
+
 .input-container {
-    position: relative;
-    &::after {
+  position: relative;
+  border-bottom: 1px solid $underbar-color;
+
+
+  &::after {
         @include input-sides-border();
         right: 0;
     }
@@ -66,9 +84,67 @@
     }
     input {
         clear: none;
+        padding-left: 1px;
+        padding-right: 1px;
+    };
+
+
+    input, textarea {
+      background: transparent;
+      border: none !important;
     }
+
+
 }
 
 .full-height {
     @include full-height();
 }
+
+select {
+  height: 26px;
+  border: none;
+  border-bottom: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+
+}
+
+.ellipse-button{
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+
+}
+
+
+.select-container{
+  height: 30px;
+  border-bottom: 1px solid $underbar-color;
+
+  select {
+    border-color: $secondary-button-color;
+    color: darken($secondary-button-color,20%);
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    &:active
+    {
+      color: $header-backcolor
+    }
+  }
+
+  .back-arrow{
+    border: 7px solid transparent;
+    width: 1px;
+    float: right;
+    border-top-color:  $secondary-button-color;
+    margin: -7px -7px 0px 0px;
+    transform: rotate(-51deg);
+    -webkit-transform:  rotate(-51deg);
+
+  }
+
+}
+

@@ -1,0 +1,45 @@
+<div class="form signin">
+
+    <ons-row class="res-row">
+        <div class="veihcle-title-content">
+            <div class="veihcle-title">
+                <i class="icon-icone_location"></i>
+                <h5 class="title">
+                    Agende seu caminhão
+                </h5>
+            </div>
+            <p class="title gray">
+                Qual sua proxima disponibilidade?
+            </p>
+
+        </div>
+
+    </ons-row>
+
+    <ons-row class="res-row">
+
+        <div class="sm-20 md-20 lg-5">
+            <div class="input-container" input-container>
+                <input type="text" class="text-input text-input--underbar large"
+                       ng-model="signInVM.agentamentoAtivo.cidade"
+                       required placeholder="Cidade">
+            </div>
+
+        </div>
+        <div class="sm-20 md-20 lg-5">
+            <div class="input-container" input-container>
+                <input type="text" class="text-input text-input--underbar large"
+                       ng-model="signInVM.agendamentoAtivo.data"
+                       required placeholder="Dia\Mês\Ano" onfocus="this.type = 'date'" onclick="this.type = 'date'">
+            </div>
+
+        </div>
+
+
+    </ons-row>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

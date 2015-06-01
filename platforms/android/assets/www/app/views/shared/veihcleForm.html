@@ -1,0 +1,61 @@
+<div class="form signin">
+
+    <ons-row class="res-row">
+        <div class="veihcle-title-content">
+            <div class="veihcle-title">
+                <i class="icon-icone_truck"></i>
+                <h5 class="title">
+                    Adicione seu caminhão
+                </h5>
+            </div>
+            <p class="title gray">
+                Receba oportunidades
+            </p>
+
+        </div>
+
+    </ons-row>
+
+    <ons-row class="res-row">
+
+        <div class="sm-20 md-20 lg-5">
+            <div class="input-container" input-container>
+                <input type="text" class="text-input text-input--underbar large"
+                       ng-model="veihcleActiveController.veiculoAtivo.plate"
+                       mask="@@@9999"
+                       style="text-transform: uppercase"
+                       ng-disabled="(self.plateEnabled != undefined && self.plateEnabled == false)"
+                       required placeholder="Placa" value="">
+            </div>
+
+        </div>
+        <div class="sm-20 md-20 lg-5 select-container">
+            <select class
+                    required
+                    ng-options="type.id as type.title for type in veihcleActiveController.veihcleType"
+                    ng-model="veihcleActiveController.veiculoAtivo.type">
+                <option value="">Veículo</option>
+            </select>
+            <div class="back-arrow">
+
+            </div>
+
+        </div>
+        <div class="sm-20 md-20 lg-5 select-container">
+            <select class
+                    required
+                    ng-options="type.id as type.title for type in veihcleActiveController.veihcleBodyType"
+                    ng-model="veihcleActiveController.veiculoAtivo.veihcleBodyType">
+                <option value="">Carroceria</option>
+            </select>
+            <div class="back-arrow">
+
+            </div>
+        </div>
+    </ons-row>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

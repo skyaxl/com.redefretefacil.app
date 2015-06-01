@@ -16,9 +16,9 @@
   }
   .truck {
     color: rgba(255, 255, 255, 0.7);
-    padding-top: 20%;
+    padding-top: 15%;
     height: 100%;
-    [class*="flaticon-"] {
+    [class*="icon-"] {
       font-size: 300%;
       clear: both;
       margin: 0 auto 0 auto;
@@ -29,6 +29,7 @@
       margin: 2% 0 0 0;
       padding: 0;
       font-size: 110%;
+      text-transform: uppercase;
     }
     &:active {
       opacity: 1 !important;
@@ -49,8 +50,10 @@
     float: right;
     color: #ababab !important;
     font-size: 17px;
-    top: -5%;
+    top: -1%;
+    font-weight: lighter;
     position: absolute;
+    right: -3%;
   }
   &:active {
     box-shadow: 0 0 transparent;
@@ -68,6 +71,48 @@
 
 }
 
+.logo-container
+{
+  top: 30%;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+div.carousel{
+  width: 100%;
+  top: 45%;
+  position: fixed;
+  text-align: center;
+  color: white;
+
+  .indicator{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .indicator button i{
+    color:white;
+  }
+
+  .indicator button.active i{
+    color: darken(white,10%)
+
+  }
+
+
+}
+
+
+
+
+i.icon-logo_rede{
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 200%;
+}
+
 .schedule.free {
   .container {
     .title {
@@ -79,7 +124,7 @@
 
   .truck {
     background-color: $schedule-truck-free !important;
-  }
+     }
 }
 
 .schedule.success {
@@ -103,4 +148,25 @@
     text-align: center;
     font-size: 150%;
   }
+
+
+}
+
+.anime-hide{
+  animation: swipe 5s linear 0s;
+  -moz-animation: swipe 5s linear 0s;
+  display: none;
+}
+
+@keyframes swipe {
+  0%   {margin-left: 25%;display: block}
+  25%  {margin-left: 50%;display: block}
+  50%  {margin-left: 75%;display: block}
+  100% {margin-left: 100%; display: none}
+}
+@-webkit-keyframes swipe {
+  0%   {margin-left: 25%;display: block}
+  25%  {margin-left: 50%;display: block}
+  50%  {margin-left: 75%;display: block}
+  100% {margin-left: 100%; display: none}
 }

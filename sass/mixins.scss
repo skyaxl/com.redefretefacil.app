@@ -1,7 +1,7 @@
 @import 'variables';
 
 @mixin buttonShadowAndColor($shadow) {
-    box-shadow: inset 3px -3px darken($shadow, 7%);
+  //  box-shadow: inset 3px -3px darken($shadow, 7%);
     background-color: $shadow;
 }
 
@@ -30,7 +30,7 @@
     width: 1px;
     height: 5px;
     content: " ";
-    background-color: #ddd;
+    background-color: $underbar-color;
     position: absolute;
     bottom: 0;
 }

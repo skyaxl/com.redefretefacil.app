@@ -6,20 +6,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Rede Frete Facil</title>
-
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
     <link rel="stylesheet" href="styles/onsen-css-components-blue-basic-theme.css">
+    <link rel="stylesheet" href="css/rfficons.css" />
     <link rel="stylesheet" href="styles/app.css" />
     <link rel="stylesheet" href="css/pattern.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/schedule.css" />
     <link rel="stylesheet" href="css/flaticons.css" />
     <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/signin.css" />
+
     <script src="js/linq.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/moment/locale/pt-br.js"></script>
     <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-mask/dist/ngMask.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
     <script type="text/javascript">
@@ -28,15 +32,52 @@
         });
     </script>
     <script src="app/app.js"></script>
+    <script src="app/directives/input-container.js"></script>
     <script src="app/factories/trucksStubs.js"></script>
     <script src="app/controllers/dashboard.js"></script>
     <script src="app/controllers/signin.js"></script>
+    <script src="app/controllers/vehicle.js"></script>
+    <script src="app/controllers/login.js"></script>
 </head>
 
 <body>
-    <ons-navigator animation="slide" var="navi">
+
+    <ons-navigator  animation="slide" var="navi"  ons-postpop="console.log('pop')">
         <ons-page modifier="full_bg">
-            <ons-bottom-toolbar id="first-tab-bar">
+
+            <div class="logo-container">
+               <span>
+                    <i class="icon-logo_rede">
+
+                    </i>
+
+               </span>
+            </div>
+            <div class="carousel">
+            <ons-carousel var="carousel"  intial-index="0" auto-scroll auto-scroll-ratio="0.0"  swipeable overscrollable style="width: 100%;min-height: 100px;margin:auto;">
+                <ons-carousel-item>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec purus accumsan, condimentum odio eget, ultricies augue. Praesent sed est mi.</span>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec purus accumsan, condimentum odio eget, ultricies augue. Praesent sed est mi.</span>
+                </ons-carousel-item>
+            </ons-carousel>
+            <div class="indicator" ng-init="changeItemCarousel(carousel)">
+                <button class="button button--quiet" ng-click="carousel.setActiveCarouselItemIndex(0)" ng-class="{active: activeHomeCarouselIndex == 1}">
+                    <i class="fa fa-circle">
+
+                    </i>
+                </button>
+                <button class="button button--quiet"  ng-click="carousel.setActiveCarouselItemIndex(1)" ng-class="{active: activeHomeCarouselIndex == 0}">
+                    <i class="fa fa-circle">
+
+                    </i>
+                </button>
+            </div>
+            </div>
+
+
+            <ons-bottom-toolbar id="first-tab-bar" >
                 <ons-row>
                     <ons-col>
                         <button class="button button--large secondary-button" ng-click="navi.pushPage('app/views/signin/profile.html')">Cadastro</button>
@@ -48,6 +89,29 @@
             </ons-bottom-toolbar>
         </ons-page>
     </ons-navigator>
+    <script type="text/ons-template" id="popover.html">
+        <ons-popover direction="up down" modifier="android" cancelable>
+            <div style="text-align: center; opacity: 0.5;">
+                <p>Olá {{cliente.nome}}</p>
+                <ons-list>
+                    <ons-list-item modifier="tappable">Meus Dados</ons-list-item>
+                    <ons-list-item modifier="tappable" ng-click="navi.pushPage('app/views/veihcles/veihclesList.html');popover.hide()">Meus Caminhões</ons-list-item>
+                    <ons-list-item modifier="tappable">Sair</ons-list-item>
+                </ons-list>
+            </div>
+        </ons-popover>
+    </script>
+
+    <script type="text/ons-template" id="popoverSchedule.html">
+        <ons-popover direction="up down" modifier="android" cancelable>
+            <div style="text-align: center; opacity: 0.5;">
+                <ons-list>
+                    <ons-list-item modifier="tappable" ng-click="removeSchedule()">Cancelar</ons-list-item>
+                </ons-list>
+            </div>
+        </ons-popover>
+    </script>
+
 </body>
 
 </html>

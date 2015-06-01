@@ -1,26 +1,31 @@
-<ons-page ng-init="pageTitle = 'Entrar'">
+<ons-page ng-init="pageTitle = 'Entrar'" ng-controller="loginController as vm">
     <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
-    <div class="login-form">
-        <ons-row>
-            <ons-col>
-                <div class="input-container">
-                    <input type="email" class="text-input text-input--underbar large" placeholder="Email" value="">
-                </div>
-            </ons-col>
-        </ons-row>
-        <ons-row>
-            <ons-col>
-                <div class="input-container">
-                    <input type="password" class="text-input text-input--underbar large" placeholder="Senha" value="">
-                </div>
-            </ons-col>
-        </ons-row>
-        <br>
-        <br>
-        <ons-button modifier="large" class="login-button primary-button" ng-click="navi.pushPage('app/views/home/home.html')">Entrar</ons-button>
-        <br>
-        <br>
-    </div>
+    <form ng-submit="vm.loginAction()">
+        <div class="login-form">
+            <ons-row>
+                <ons-col>
+                    <div class="input-container">
+                        <input type="email" required="" class="text-input text-input--underbar large" placeholder="Email" ng-model="vm.login.email" value="">
+                    </div>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <div class="input-container">
+                        <input type="password" required class="text-input text-input--underbar large" placeholder="Senha" ng-model="vm.login.senha" value="">
+                    </div>
+                </ons-col>
+            </ons-row>
+            <br>
+            <br>
+            <button id="login" type="submit" ng-hide="true"></button>
+            <ons-button modifier="large" class="login-button primary-button" onclick="document.getElementById('login').click();">
+                Entrar</ons-button>
+            <br>
+            <br>
+        </div>
+
+    </form>
     <ons-bottom-toolbar>
         <ons-button modifier="large" class="secondary-button forgot-password full-height" ng-click="navi.pushPage('app/views/login/forgot.html')">Esqueceu a Senha?</ons-button>
     </ons-bottom-toolbar>

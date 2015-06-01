@@ -35,3 +35,38 @@
 .forgot-password {
     color: gray !important;
 }
+
+.login-form.email{
+  top: 20% !important;
+
+  .tel{
+    color: $header-backcolor;
+    font-weight: lighter;
+  }
+
+}
+
+.forgot-email-content{
+  color: $header-backcolor;
+  margin-top: 0px;
+  border-bottom: 1px solid lightgrey;
+  i{
+    font-size: 170px;
+  }
+  .title.gray{
+    color: lightgrey !important;
+    text-transform: none;
+    text-align: justify;
+  }
+
+
+  .title{
+
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+
+
+}

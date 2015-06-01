@@ -1,0 +1,58 @@
+<ons-page ng-init="pageTitle = 'Cadastro'" ng-controller="signInController as signInViewModel">
+    <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <form ng-submit="signInViewModel.validarTelefone()" id="form-cadastro-contato">
+        <div class="form signin">
+            <ons-row class="res-row">
+                <h5 class="title gray">
+                    Informe o seu telefone para que possamos validar o seu contato
+                </h5>
+
+                <div class="sm-20 md-20">
+                    <div class="input-container" input-container>
+                        <input type="tel" class="text-input text-input--underbar large"
+                               ng-model="signInViewModel.cliente.telefone"
+                               mask="(99) 9?9999-9999"
+                               required placeholder="Telefone (DDD + Telefone)" value="">
+                    </div>
+                </div>
+            </ons-row>
+            <ons-row class="res-row">
+                <div class="sm-20 md-20">
+
+                    <ons-button modifier="large" class="secondary-button full-height" onclick="document.getElementById('hidesub').click()">Validar Telefone
+
+                    </ons-button>
+                </div>
+            </ons-row>
+
+
+            </ons-row>
+
+            <ons-row class="res-row">
+
+                <h5 class="title gray">
+                    Informe o código recebido por sms
+                </h5>
+
+                <div class="sm-20 md-20">
+                    <div class="input-container" input-container>
+                        <input type="text" class="text-input text-input--underbar large"
+                               ng-model="signInViewModel.cliente.codigoSms"
+                               required placeholder="Código Recebido" value="">
+                    </div>
+                </div>
+            </ons-row>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <button type="submit" id="hidesub2" ng-hide="true"></button>
+    </form>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" onclick="document.getElementById('hidesub2').click()">Avançar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

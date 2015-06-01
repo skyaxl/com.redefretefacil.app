@@ -12,9 +12,9 @@
     height: 12%; }
   .schedule .truck {
     color: rgba(255, 255, 255, 0.7);
-    padding-top: 20%;
+    padding-top: 15%;
     height: 100%; }
-    .schedule .truck [class*="flaticon-"] {
+    .schedule .truck [class*="icon-"] {
       font-size: 300%;
       clear: both;
       margin: 0 auto 0 auto;
@@ -23,7 +23,8 @@
     .schedule .truck p {
       margin: 2% 0 0 0;
       padding: 0;
-      font-size: 110%; }
+      font-size: 110%;
+      text-transform: uppercase; }
     .schedule .truck:active {
       opacity: 1 !important; }
   .schedule .container {
@@ -38,8 +39,10 @@
     float: right;
     color: #ababab !important;
     font-size: 17px;
-    top: -5%;
-    position: absolute; }
+    top: -1%;
+    font-weight: lighter;
+    position: absolute;
+    right: -3%; }
   .schedule:active {
     box-shadow: 0 0 transparent; }
   @media (min-width: 1025px) {
@@ -49,6 +52,32 @@
       float: left;
       clear: none;
       position: relative; } }
+
+.logo-container {
+  top: 30%;
+  position: fixed;
+  width: 100%;
+  text-align: center; }
+
+div.carousel {
+  width: 100%;
+  top: 45%;
+  position: fixed;
+  text-align: center;
+  color: white; }
+  div.carousel .indicator {
+    margin-left: auto;
+    margin-right: auto; }
+  div.carousel .indicator button i {
+    color: white; }
+  div.carousel .indicator button.active i {
+    color: #e6e6e6; }
+
+i.icon-logo_rede {
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 200%; }
 
 .schedule.free .container .title {
   color: #ff5a00;
@@ -72,3 +101,42 @@
   .big-notification p {
     text-align: center;
     font-size: 150%; }
+
+.anime-hide {
+  animation: swipe 5s linear 0s;
+  -moz-animation: swipe 5s linear 0s;
+  display: none; }
+
+@keyframes swipe {
+  0% {
+    margin-left: 25%;
+    display: block; }
+
+  25% {
+    margin-left: 50%;
+    display: block; }
+
+  50% {
+    margin-left: 75%;
+    display: block; }
+
+  100% {
+    margin-left: 100%;
+    display: none; } }
+
+@-webkit-keyframes swipe {
+  0% {
+    margin-left: 25%;
+    display: block; }
+
+  25% {
+    margin-left: 50%;
+    display: block; }
+
+  50% {
+    margin-left: 75%;
+    display: block; }
+
+  100% {
+    margin-left: 100%;
+    display: none; } }

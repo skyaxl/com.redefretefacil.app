@@ -1,0 +1,14 @@
+<ons-page ng-init="pageTitle = 'Meus Caminhões';showContext = false" ons-page ng-controller="vehicleController as vm">
+    <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <ons-list>
+
+    <ons-list-item ng-repeat="truck in cliente.veiculos" modifier="tappable" ng-click="vm.editAddVehicle(truck)">
+    <p>{{truck.plate}}</p>
+    </ons-list-item >
+    </ons-list>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" ng-click="vm.editAddVehicle()">Adicionar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

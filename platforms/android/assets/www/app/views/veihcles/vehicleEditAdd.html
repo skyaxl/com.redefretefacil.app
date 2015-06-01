@@ -1,0 +1,13 @@
+<ons-page ng-controller="vehicleController as veihcleActiveController">
+
+    <ng-include ng-init="pageTitle = veihcleActiveController.pageVeiculoTitle" src="'app/views/shared/toolbar-with-back.html'"></ng-include>
+    <form ng-submit="veihcleActiveController.save()" id="form-cadastro">
+        <ng-include src="'app/views/shared/veihcleForm.html'"></ng-include>
+        <button type="submit" id="subVehicle" ng-hide="true"></button>
+    </form>
+    <ons-bottom-toolbar>
+        <ons-button modifier="large" class="primary-button full-height" onclick="document.getElementById('subVehicle').click()">Salvar
+
+        </ons-button>
+    </ons-bottom-toolbar>
+</ons-page>

@@ -1,56 +1,58 @@
 .user-types {
   border: none; }
 
-.radio-rede-frete-facil {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #d7d7d7;
-  text-transform: uppercase;
-  min-height: 70px;
-  padding: 15px;
+.finish-page, .finish-page .page__background {
+  background-color: #1fbdbe !important; }
+
+.form.signin .select, .form.signin input {
+  font-size: 15px !important; }
+.form.signin .select-container {
+  border-color: #1fbdbe; }
+  .form.signin .select-container .back-arrow {
+    border-top-color: #1fbdbe; }
+  .form.signin .select-container select {
+    color: #1fbdbe; }
+.form.signin .row:nth-of-type(1) {
+  margin-bottom: 10px; }
+.form.signin .row {
+  margin-top: 20px; }
+.form.signin .button {
+  width: 94%;
+  margin: 15px 2.5% 2.5% 15px; }
+.form.signin .input-container, .form.signin .select-container {
+  margin: 15px 5px 0 15px; }
+  .form.signin .input-container:after, .form.signin .select-container:after {
+    right: 0px; }
+.form.signin .title {
+  font-weight: lighter;
+  padding: 0 6px 0 6px;
+  font-style: italic; }
+.form.signin .title.gray, .form.signin .title.gray {
+  color: #cdcccc; }
+.form.signin .finish-title-content {
+  margin: 100px 0 0 0; }
+.form.signin .finish-title-content .title {
+  color: white; }
+.form.signin .veihcle-title-content, .form.signin .finish-title-content {
   text-align: center;
-  color: #999999;
-  border-radius: 3px;
-  margin: 3% 2% 0 2%; }
-  .radio-rede-frete-facil:active {
-    background-color: #d7d7d7; }
-  .radio-rede-frete-facil .feature {
-    font-size: 18px;
-    margin: 0 0 0 0;
-    font-weight: 700;
-    line-height: normal; }
-  .radio-rede-frete-facil input[type=radio] {
-    display: none; }
-  .radio-rede-frete-facil.selected, .radio-rede-frete-facil.selected:active {
-    background-color: #1fbdbe !important;
-    color: white; }
-  .radio-rede-frete-facil span {
-    font-size: 11px;
-    width: 100%;
-    font-weight: 600;
-    line-height: 10px; }
-  @media (min-width: 1025px) {
-    .radio-rede-frete-facil {
-      width: 100px;
-      margin-left: 3%;
-      float: left;
-      clear: none;
-      position: relative; } }
-
-select {
-  height: 26px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-
-.select-container .back-arrow {
-  border: 5px solid transparent;
-  width: 5px;
-  float: right;
-  border-top-color: #1fbdbe;
-  margin: -20px 0 1px 0px; }
-
-.form.signin input, .form.signin textarea, .form.signin select {
-  margin: 10px 0 5px 10px;
-  background: transparent; }
+  width: 100%; }
+  .form.signin .veihcle-title-content .title.gray, .form.signin .finish-title-content .title.gray {
+    margin: 5px 0 0 0; }
+.form.signin .finish-title {
+  color: white !important;
+  padding-top: 50px; }
+  .form.signin .finish-title h5.title {
+    color: white !important;
+    margin: 30px 0 0 0;
+    text-transform: uppercase; }
+  .form.signin .finish-title i {
+    font-size: 110px; }
+.form.signin .veihcle-title {
+  color: #1fbdbe !important;
+  padding-top: 50px; }
+  .form.signin .veihcle-title h5.title {
+    color: #1fbdbe !important;
+    margin: 5px 0 0 0;
+    text-transform: uppercase; }
+  .form.signin .veihcle-title i {
+    font-size: 110px; }

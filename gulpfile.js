@@ -7,13 +7,13 @@ var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer-core');
 var filter = require('gulp-filter')
-var filterCSS = filter('**/*.css');
+
 ////////////////////
 // build
 ////////////////////
 gulp.task('build', ['compile-stylus', 'jshint']);
 
-//gulp.watch('./sass/*.scss', ['sass']);
+gulp.watch('./sass/*.scss', ['sass']);
 
 ////////////////////
 // default
@@ -147,7 +147,7 @@ function jshintNotify() {
 //sass
 
 gulp.task('sass', function () {
-
+    var filterCSS = filter('**/*.css');
     gulp.src('./sass/*.scss')
 
         .pipe(filterCSS)
