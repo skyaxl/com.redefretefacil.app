@@ -14,11 +14,23 @@
 
 
     };
+    
+    var schedulesClienteStub = {};
+    schedulesClienteStub.$inject = [];
+    schedulesClienteStub = function () {
+
+        return [];
+
+
+    };
+    
     var clienteStub = {};
     clienteStub.$inject = ['trucks'];
     clienteStub = function(trucks){
         return {
-            veiculos : trucks
+            cliente : {
+              veiculos : {}
+            }
 
         };
     };
@@ -35,6 +47,15 @@
                     plate: 'ALH1234'
                 }],
                 senha: '123'
+            },
+            {
+                nome: 'Ramire',
+                email: 'ramire@rff',
+                telefone: '4988899630',
+                veiculos: [{
+                    plate: 'RDR2111'
+                }],
+                senha: '123'
             }
 
 
@@ -45,6 +66,7 @@
     app.factory("clienteStub", clienteStub);
 
     app.factory("schedules", schedulesStub);
+       app.factory("schedulesCliente", schedulesClienteStub);
     app.factory("clientesStub", clientesStub);
 
 }());

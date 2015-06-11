@@ -5,21 +5,28 @@
             <ons-row>
                 <ons-col>
                     <div class="input-container">
-                        <input type="email" required="" class="text-input text-input--underbar large" placeholder="Email" ng-model="vm.login.email" value="">
+                        <input type="email" required 
+                               class="text-input text-input--underbar large" 
+                               placeholder="Email" 
+                               ng-model="loginCliente.email">
                     </div>
                 </ons-col>
             </ons-row>
             <ons-row>
                 <ons-col>
                     <div class="input-container">
-                        <input type="password" required class="text-input text-input--underbar large" placeholder="Senha" ng-model="vm.login.senha" value="">
+                        <input type="password" 
+                               required 
+                               class="text-input text-input--underbar large" 
+                               placeholder="Senha" 
+                               ng-model="loginCliente.senha">
                     </div>
                 </ons-col>
             </ons-row>
             <br>
             <br>
-            <button id="login" type="submit" ng-hide="true"></button>
-            <ons-button modifier="large" class="login-button primary-button" onclick="document.getElementById('login').click();">
+            <button id="loginSubmit" type="submit" ng-hide="true"></button>
+            <ons-button modifier="large" class="login-button primary-button" onclick="document.getElementById('loginSubmit').click();">
                 Entrar</ons-button>
             <br>
             <br>

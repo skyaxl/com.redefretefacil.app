@@ -1,7 +1,7 @@
-<ons-page ng-controller="dashboardController as signInVM" ng-init="signInVM.setPageTitle('Agendamento')" >
+<ons-page ng-controller="dashboardController as signInVM" ng-init="pageTitle = 'Agendar: ' + agendamentoAtivo.truck.plate.toUpperCase() " >
     <ng-include  src="'app/views/shared/toolbar-with-back.html'" ></ng-include>
     <form ng-submit="signInVM.save()" id="form-cadastro">
-        <ng-include ng-init="pageTitle = signInVM.pageVeiculoTitle" src="'app/views/shared/scheduleFormShared.html'"></ng-include>
+        <ng-include src="'app/views/shared/scheduleFormShared.html'"></ng-include>
         <button type="submit" id="scheduleSub" ng-hide="true"></button>
     </form>
     <ons-bottom-toolbar>

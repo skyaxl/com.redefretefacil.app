@@ -2,13 +2,13 @@
 
     <ng-include src="'app/views/shared/toolbar-with-back.html'"></ng-include>
 
-            <div class="big-notification" ng-class="{'anime-hide' : animeHide}" ng-swipe-right="animeHide = true" >
+            <div class="big-notification" ng-class="{'anime-hide' : animeHide}" ng-hide="animeHideComplete" ng-swipe-right="animeHideAct()" >
                 <p>
                     Mantenha seus caminhões agendados e aumente suas oportunidades.
                 </p>
             </div>
 
-            <button class="schedule free" ng-repeat="truck in vm.trucks" ng-if="!truck.scheduled" ng-click="vm.add(truck)">
+            <button class="schedule free" ng-repeat="truck in vm.trucks track by truck.plate" ng-if="!truck.scheduled" ng-click="vm.add(truck)">
                 <div class="row">
                     <ons-col width="40%">
                         <ons-button modifier="large" class="truck">
@@ -26,7 +26,7 @@
                 </div>
             </button>
 
-            <div class="schedule success" id="schedule-{{$index}}" ng-repeat="schedule in vm.schedules">
+            <div class="schedule success" id="schedule-{{$index}}" ng-repeat="schedule in schedulesCliente">
                 <div class="row">
                     <ons-col width="40%">
                         <ons-button modifier="large" class="truck">

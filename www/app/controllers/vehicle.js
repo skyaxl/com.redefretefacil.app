@@ -8,7 +8,7 @@
 
         var self = this;
         self.veiculoAtivo = $rootScope.veiculoAtivo;
-        $rootScope.cliente = clienteStub;
+        $rootScope.cliente = clienteStub.cliente;
         self.pageVeiculoTitle =$rootScope.pageVeiculoTitle
         self.plateEnabled = true;
         self.editAddVehicle = function(vehicle){
@@ -31,7 +31,6 @@
                 $rootScope.cliente.veiculos.push( self.veiculoAtivo);
 
             }
-            $rootScope.dashboardRefresh();
             $rootScope.navi.popPage();
 
         }

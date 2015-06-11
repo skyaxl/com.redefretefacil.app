@@ -102,10 +102,12 @@ i.icon-logo_rede {
     text-align: center;
     font-size: 150%; }
 
-.anime-hide {
-  animation: swipe 5s linear 0s;
-  -moz-animation: swipe 5s linear 0s;
+.popover__top-arrow {
   display: none; }
+
+.anime-hide {
+  animation: swipe 0.5s linear 0s;
+  -moz-animation: swipe 0.5s linear 0s; }
 
 @keyframes swipe {
   0% {

@@ -43,7 +43,7 @@
 <body>
 
     <ons-navigator  animation="slide" var="navi"  ons-postpop="console.log('pop')">
-        <ons-page modifier="full_bg">
+        <ons-page modifier="full_bg" >
 
             <div class="logo-container">
                <span>
@@ -54,25 +54,42 @@
                </span>
             </div>
             <div class="carousel">
-            <ons-carousel var="carousel"  intial-index="0" auto-scroll auto-scroll-ratio="0.0"  swipeable overscrollable style="width: 100%;min-height: 100px;margin:auto;">
+            <ons-carousel var="carousel"  intial-index="0" auto-scroll auto-scroll-ratio="0.0"  swipeable overscrollable style="width: 80%;min-height: 100px;margin:auto;">
                 <ons-carousel-item>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec purus accumsan, condimentum odio eget, ultricies augue. Praesent sed est mi.</span>
+                    <span> Seja bem vindo a Rede Frete Fácil, uma plataforma inteligente de gestão de terceiros e agregados.</span>
                 </ons-carousel-item>
                 <ons-carousel-item>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec purus accumsan, condimentum odio eget, ultricies augue. Praesent sed est mi.</span>
+                    <span> Agende seu veículo informando quando e onde ele estará vazio.</span>
                 </ons-carousel-item>
+                <ons-carousel-item>
+                    <span>Essa informação é divulgada para empresas interessadas que entram em contato com você para negociar a contratação do frete.</span>
+                </ons-carousel-item>
+                
             </ons-carousel>
             <div class="indicator" ng-init="changeItemCarousel(carousel)">
-                <button class="button button--quiet" ng-click="carousel.setActiveCarouselItemIndex(0)" ng-class="{active: activeHomeCarouselIndex == 1}">
+                
+                 <button class="button button--quiet"  ng-click="carousel.setActiveCarouselItemIndex(0)" 
+                        ng-class="{active: activeHomeCarouselIndex != 0}">
                     <i class="fa fa-circle">
 
                     </i>
                 </button>
-                <button class="button button--quiet"  ng-click="carousel.setActiveCarouselItemIndex(1)" ng-class="{active: activeHomeCarouselIndex == 0}">
+                
+                <button class="button button--quiet" ng-click="carousel.setActiveCarouselItemIndex(1)" 
+                        ng-class="{active: activeHomeCarouselIndex != 1}">
                     <i class="fa fa-circle">
 
                     </i>
                 </button>
+                
+               
+                <button class="button button--quiet"  ng-click="carousel.setActiveCarouselItemIndex(2)" 
+                        ng-class="{active: activeHomeCarouselIndex != 2}">
+                    <i class="fa fa-circle">
+
+                    </i>
+                </button>
+                
             </div>
             </div>
 
@@ -80,7 +97,7 @@
             <ons-bottom-toolbar id="first-tab-bar" >
                 <ons-row>
                     <ons-col>
-                        <button class="button button--large secondary-button" ng-click="navi.pushPage('app/views/signin/profile.html')">Cadastro</button>
+                        <button class="button button--large secondary-button" ng-click="signin()">Cadastro</button>
                     </ons-col>
                     <ons-col>
                         <button class="button button--large primary-button" ng-click="navi.pushPage('app/views/login/login.html')">Entrar</button>
@@ -96,7 +113,7 @@
                 <ons-list>
                     <ons-list-item modifier="tappable">Meus Dados</ons-list-item>
                     <ons-list-item modifier="tappable" ng-click="navi.pushPage('app/views/veihcles/veihclesList.html');popover.hide()">Meus Caminhões</ons-list-item>
-                    <ons-list-item modifier="tappable">Sair</ons-list-item>
+                    <ons-list-item modifier="tappable" ng-click="signout()">Sair</ons-list-item>
                 </ons-list>
             </div>
         </ons-popover>

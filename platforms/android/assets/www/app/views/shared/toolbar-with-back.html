@@ -9,7 +9,7 @@
     <div class="center">
         <span>{{pageTitle}}</span>
     </div>
-    <div class="right" ng-if="showContext">
+    <div class="right" ng-if="!!showContext">
 
         <ons-toolbar-button id="mainMenu" ons-if-platform="android"  style="width: 20%" ng-click="popover.show('#mainMenu')">
             <ons-icon icon="ion-more" class="ellipse-button">

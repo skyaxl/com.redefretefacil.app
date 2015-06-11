@@ -3,7 +3,15 @@
     <ons-list>
 
     <ons-list-item ng-repeat="truck in cliente.veiculos" modifier="tappable" ng-click="vm.editAddVehicle(truck)">
-    <p>{{truck.plate}}</p>
+    <span>{{truck.plate}}</span>
+        <ons-button modifier="quiet" class="right" style="float:right" ng-click="cliente.veiculos.remove(truck)">
+                 <ons-icon
+                    icon="ion-close-circled"
+                    size="30px"
+                    fixed-width="false"
+                    style="color: red">
+                </ons-icon>
+        </ons-button>
     </ons-list-item >
     </ons-list>
     <ons-bottom-toolbar>

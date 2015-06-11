@@ -7,27 +7,23 @@
     loginController = function (clientesStub,$rootScope,clienteStub,trucks) {
 
         var self = this;
-        this.login = { email: '',senha:''}
-        this.loginAction = function(){
+        $rootScope.loginCliente = { email: '',senha:''};
+        self.loginAction = function(){
              var cliente = clientesStub.firstOrDefault(function(ele){
-                 return ele.email == self.login.email;
+                 return ele.email == $rootScope.loginCliente.email;
              });
 
-            if(!cliente || cliente.senha != self.login.senha)
+            if(!cliente || cliente.senha != $rootScope.loginCliente.senha)
             {
                 $rootScope.ons.notification.alert({
                     message: 'Email ou senha invalidos'
                 });
                 return;
             }
-
-            for(var prop in cliente)
-            {
-                clienteStub[prop] = cliente[prop];
-            }
-
-            //clienteStub = cliente;
-            $rootScope.navi.pushPage('app/views/home/home.html')
+ 
+            clienteStub.cliente = cliente;
+            $rootScope.navi.pushPage('app/views/home/home.html');
+            $rootScope.loginCliente = { email: '',senha:''};
         }
 
     };

@@ -2,42 +2,43 @@
  (function () {
 
      var dashboardController = {};
-     dashboardController.$inject = ['trucks', 'schedules','$rootScope'];
+     dashboardController.$inject = ['trucks', 'schedules','$rootScope','schedulesCliente'];
 
-     dashboardController = function (trucks, schedules, $rootScope,clienteStub) {
+     dashboardController = function (trucks, schedules, $rootScope,clienteStub,schedulesCliente) {
 
         var self = this;
-         self.trucks = clienteStub.veiculos;
-         this.schedules = schedules;
-
-         this.setPageTitle = function(title){
-             $rootScope.pageTitle = title;
-             console.log('titulo :' + title);
-         }
-
-         this.fix = function(){
-
-         };
-         $rootScope.cliente = clienteStub;
+         self.trucks = clienteStub.cliente.veiculos;
+         schedulesCliente =   schedules.where(function(ele){ 
+            return self.trucks.any(function(truck){
+              return truck.plate == ele.truck.plate;
+             });
+         });
+         self.schedules = schedulesCliente;
+         $rootScope.schedulesCliente = schedulesCliente;
+         self.agendamentoAtivo = $rootScope.agendamentoAtivo;
+        $rootScope.cliente = clienteStub.cliente;
+             
 
          $rootScope.ons.createPopover('popover.html').then(function(popover){
              $rootScope.popover = popover;
          });
 
          ons.createPopover('popoverSchedule.html').then(function(popover){
-             self.popoverSchedule = popover;
+             $rootScope.popoverSchedule = popover;
          });
          this.popoveSchedule = function(id,schedule){
-             self.popoverSchedule.show(id);
+             $rootScope.popoverSchedule.show(id);
              self.activeSchedule = schedule;
+             $rootScope.agendamentoAtivo = schedule;
          }
          $rootScope.removeSchedule = function(){
              schedules.remove($rootScope.agendamentoAtivo);
+             self.schedules.remove($rootScope.agendamentoAtivo);
              $rootScope.agendamentoAtivo.truck.scheduled = false;
-             self.popoverSchedule.hide();
+             schedulesCliente.remove($rootScope.agendamentoAtivo); 
+             $rootScope.popoverSchedule.hide();
          };
-         self.root = $rootScope;
-         self.agendamentoAtivo = $rootScope.agendamentoAtivo;
+       
          this.add = function(truck){
              $rootScope.agendamentoAtivo= self.agendamentoAtivo = self.activeSchedule = {truck:truck};
              $rootScope.pageTitleSchedule = 'Agendar ' + truck.plate;
@@ -54,6 +55,7 @@
              };
              truck.scheduled = true;
              schedules.push(newSchedule);
+             schedulesCliente.push(newSchedule); 
              $rootScope.navi.popPage();
          };
 

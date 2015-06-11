@@ -152,11 +152,20 @@ i.icon-logo_rede{
 
 }
 
-.anime-hide{
-  animation: swipe 5s linear 0s;
-  -moz-animation: swipe 5s linear 0s;
-  display: none;
+
+
+.popover__top-arrow{
+    display: none;
+    
 }
+
+.anime-hide{
+  animation: swipe 0.5s linear 0s;
+  -moz-animation: swipe 0.5s linear 0s;
+
+}
+
+
 
 @keyframes swipe {
   0%   {margin-left: 25%;display: block}

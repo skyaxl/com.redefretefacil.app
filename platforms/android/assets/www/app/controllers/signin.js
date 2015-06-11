@@ -7,7 +7,7 @@
     signInController = function ($scope,$rootScope,clienteStub,schedules,clientesStub) {
 
         var self = this;
-        self.cliente = clienteStub;
+        self.cliente = clienteStub.cliente;
         self.pageVeiculoTitle = 'Cadastro';
 
 
@@ -98,6 +98,7 @@
                 moment : moment(this.date,'yyyy-MM-dd'),
                 truck: self.cliente.veiculos[0]
             };
+            newSchedule.truck.scheduled = true;
             schedules.push(newSchedule);
             $scope.navi.pushPage('app/views/signin/finish.html');
             clientesStub.push(self.cliente);
