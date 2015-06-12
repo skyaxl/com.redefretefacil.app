@@ -39,10 +39,9 @@
 
  (function () {
      app = angular.module('app', ['onsen','ngMask','ngTouch']);
-     var runModule = {}
-     runModule.$inject = ['$rootScope'];
 
-     runModule = function ($rootScope) {
+
+     var   runModule = function ($rootScope) {
          $rootScope.loadPages = function (navigation) {
              navigation.pushPage('app/views/first/first.html')
          }
@@ -77,7 +76,7 @@
 
 
      };
-
+     runModule.$inject = ['$rootScope'];
      app.run(runModule);
 
  }());
