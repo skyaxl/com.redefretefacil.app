@@ -53,10 +53,7 @@ Array.prototype.where = function(fn){
 
  (function () {
      app = angular.module('app', ['onsen','ngMask','ngTouch']);
-     var runModule = {}
-     runModule.$inject = ['$rootScope','clienteStub'];
-
-     runModule = function ($rootScope,clienteStub) {
+     var   runModule = function ($rootScope) {
          $rootScope.loadPages = function (navigation) {
              navigation.pushPage('app/views/first/first.html')
          }
@@ -118,7 +115,7 @@ Array.prototype.where = function(fn){
 
 
      };
-
+     runModule.$inject = ['$rootScope'];
      app.run(runModule);
 
  }());
